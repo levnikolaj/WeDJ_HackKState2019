@@ -5,6 +5,13 @@ margin-right: auto;
 width: 50%;
 }
 
+.right {
+  display: block;
+  margin-left: ;
+  margin-right: auto;
+  width: 50%;
+}
+
 body {background-color: powderblue;}
 h1   {color: blue;
       font-size: 300%;}
@@ -58,4 +65,18 @@ button {
 button:hover {
   background-color: #ddd;
   color: black;
+}
+
+/* dl{
+  position: : relative;
+  float : right;
+  down : -10px;
+} */
+
+#queue {
+  float : right;
+  background-color : pink;
+  width : 230px;
+  height : 500px;
+
 }
