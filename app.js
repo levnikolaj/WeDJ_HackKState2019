@@ -25,7 +25,7 @@ if (cluster.isMaster) {
     //var sns = new AWS.SNS();
     var ddb = new AWS.DynamoDB();
 
-    var ddbTable =  process.env.STARTUP_SIGNUP_TABLE;
+    var ddbTable =  process.env.YOU_TUBE_QUEUE_TABLE;
     //var snsTopic =  process.env.NEW_SIGNUP_TOPIC;
     var app = express();
 
@@ -35,7 +35,7 @@ if (cluster.isMaster) {
 
     app.get('/', function(req, res) {
         res.render('index', {
-            static_path: 'public',
+            static_path: 'static',
             theme: process.env.THEME || 'flatly',
             flask_debug: process.env.FLASK_DEBUG || 'false'
         });
