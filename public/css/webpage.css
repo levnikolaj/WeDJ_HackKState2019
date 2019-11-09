@@ -48,13 +48,14 @@ form.example::after {
   display: table;
 }
 /*CSS for Next Button */
-a {
+button {
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px;
+
 }
 
-a:hover {
+button:hover {
   background-color: #ddd;
   color: black;
 }
