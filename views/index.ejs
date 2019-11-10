@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Watch Party</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/webpage.css" type="text/css" rel="stylesheet"/>
+    <!-- Bootstrap core CSS -->
+    <!--<link href="<%= static_path + "/bootstrap/css/theme/" + theme + "/bootstrap.css" %>" rel="stylesheet">-->
+    <!-- Custom styles for this template -->
+    <!--<link href="<%= static_path + "/bootstrap/css/jumbotron-narrow.css" %>" rel="stylesheet">-->
+
+  </head>
+
+  <body background = "static/img/Moun.jpg">
+    <img src="static/img/Title.png" width="714" class = "center" height="114" alt="We dee jay
+    "/>
+    <img src="static/img/Subtitle.png" class = "center" width="800" height="50" alt="Play music with your friends!
+    " />
+
+
+    <form id="inputForm" role="form" class="example">
+      <input id="search" type="text" placeholder="Search.." name="search">
+      <button id="addButton" type="button">Add to queue</button>
+      <div id = "queue">
+          <img src="static/img/Up_Next.png" align = "right" width="220" height="70" alt="Up Next" />
+          <dl>
+          <dd><img src="static/img/Blue-Right-Arrow.png" width="26" height="14">Video Title 1</dd>
+          <dd><img src="static/img/Blue-Right-Arrow.png" width="26" height="14">Video Title 2</dd>
+          <dd><img src="static/img/Blue-Right-Arrow.png" width="26" height="14">Video Title 3</dd>
+          </dl>
+      </div>
+
+    <div id="postThrough" style="display:none">
+      <p> We made it through! </p>
+    </div>
+    </form>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CxnaPa8ohmM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <div id="replacement">%1</div>
+
+    <script src="<%= static_path + "/jquery/jquery-1.11.3.min.js" %>"></script>
+    <script src="<%= static_path + "/bootstrap/js/bootstrap.min.js" %>"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#addButton").click(function() {
+        $.post("/addlink", $("#inputForm").serialize());
+      })
+    })
+    /*
+    $(document).ready(function() {
+      $("#signup").click(function() {
+        $.post( "/signup", $("#signupForm").serialize(),
+                function(data) {
+                  $("#signupSuccess").show();
+                }
+              )
+              .error(function(xhr) {
+                switch(xhr.status) {
+                  case 409:
+                    $("#signupDuplicate").show();
+                    break;
+                  default:
+                    $("#signupError").show();
+                }
+              })
+              .always(function() {
+                $("#signupModal").modal('hide');
+              });
+      })
+    })*/
+
+
+  </script>
+  </body>
+</html>
